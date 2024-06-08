@@ -5,17 +5,17 @@ import sklearn
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 
-pickle_in = open("random_forests_hypertuned.pkl", "rb")
-model = pickle.load(pickle_in)
+# pickle_in = open("random_forests_hypertuned.pkl", "rb")
+# model = pickle.load(pickle_in)
 
 
 #Caching the model for faster loading
 @st.cache
 
 # Define the prediction function
-def predict(X_data, m):
-    prediction = m.predict(X_data)
-    return prediction
+# def predict(X_data, m):
+#     prediction = m.predict(X_data)
+#     return prediction
 
 
 st.title('Impoverished Group Predictor')
