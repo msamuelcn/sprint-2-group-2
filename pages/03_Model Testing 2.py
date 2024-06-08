@@ -3,8 +3,8 @@ import pickle
 import pandas as pd
 
 
-pickle_in = open("random_forests_hypertuned.pkl", "rb")
-model = pickle.load(pickle_in)
+# pickle_in = open("random_forests_hypertuned.pkl", "rb")
+# model = pickle.load(pickle_in)
 
 def predict(X_data, m):
     prediction = m.predict(X_data)
@@ -31,9 +31,9 @@ option = st.selectbox(
 
 st.write("You selected:", option)
 
-if st.button('Predict the household'):
-    predictIsPoverty = predict(X.loc[option],model)
+# if st.button('Predict the household'):
+#     predictIsPoverty = predict(X.loc[option],model)
 
-    predictIsPovertyWord = 'positive' if predictIsPoverty ==1 else 'negative'
-    st.success(f'The predicted household no.'+ option+' is '+predictIsPovertyWord+'.')
+#     predictIsPovertyWord = 'positive' if predictIsPoverty ==1 else 'negative'
+#     st.success(f'The predicted household no.'+ option+' is '+predictIsPovertyWord+'.')
 

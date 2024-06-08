@@ -5,8 +5,8 @@ import pandas as pd
 # from sklearn.ensemble import RandomForestClassifier
 # from sklearn.tree import DecisionTreeClassifier
 
-# pickle_in = open("random_forests_hypertuned.pkl", "rb")
-# model = pickle.load(pickle_in)
+pickle_in = open("random_forests_hypertuned.pkl", "rb")
+model = pickle.load(pickle_in)
 
 
 #Caching the model for faster loading
