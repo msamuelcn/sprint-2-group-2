@@ -1,9 +1,9 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import sklearn
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
+# import sklearn
+# from sklearn.ensemble import RandomForestClassifier
+# from sklearn.tree import DecisionTreeClassifier
 
 # pickle_in = open("random_forests_hypertuned.pkl", "rb")
 # model = pickle.load(pickle_in)
