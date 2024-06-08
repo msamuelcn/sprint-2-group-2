@@ -18,8 +18,6 @@ st.title('Impoverished Group Predictor')
 df = pd.read_csv('data/20240602_fies_cleaned_.csv')
 to_drop = ['SEQUENCE_NO']
 df_testing = df.drop(to_drop, axis=1)
-for col in df_testing.columns:
-  print(col)
 
 # Define features (X) and target(y)
 X = df_testing.drop(['IS_POVERTY'], axis=1) # feature, remove is_poverty
