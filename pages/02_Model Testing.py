@@ -29,13 +29,17 @@ X_trainval, X_holdout, y_trainval, y_holdout = train_test_split(X, y, random_sta
 model = RandomForestClassifier(max_depth=8, max_features='log2', n_estimators=200,
                        random_state=1337, n_jobs=-1)
 model.fit(X_trainval, y_trainval)
-predicted = model.predict(X)
+
 
 # option = st.selectbox(
 #     "Select a houshold number.",
 #     tuple(df['SEQUENCE_NO'])
 #     )
 @st.cache
+def predict1(option):
+    predicted = model.predict(X)
+    return predicted[option]
+
 
 st.caption('Try the following household number below.')
 sample_data = pd.DataFrame({
@@ -55,7 +59,7 @@ option  = st.number_input('Select a houshold number.', min_value=1, max_value=le
 # st.write("You selected:", option)
 
 if st.button('Predict the household'):
-    predictIsPoverty = predicted[option]
+    predictIsPoverty = predict1(option)
 
     predictIsPovertyWord = 'below' if predictIsPoverty ==1 else 'above'
     st.success(f'The predicted household no. '+ str(option)+' is '+predictIsPovertyWord+' of the poverty line.')
