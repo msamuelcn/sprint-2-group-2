@@ -41,7 +41,7 @@ option = st.selectbox(
 st.write("You selected:", option)
 
 if st.button('Predict the household'):
-    predictIsPoverty = predicted.loc[option]
+    predictIsPoverty = predicted[option]
 
     predictIsPovertyWord = 'positive' if predictIsPoverty ==1 else 'negative'
     st.success(f'The predicted household no.'+ option+' is '+predictIsPovertyWord+'.')
