@@ -42,7 +42,7 @@ option  = st.number_input('Select a houshold number.', min_value=1, max_value=le
 # st.write("You selected:", option)
 
 if st.button('Predict the household'):
-    predictIsPoverty = predicted[option]
+    predictIsPoverty = predicted[option-1]
 
     predictIsPovertyWord = 'positive' if predictIsPoverty ==1 else 'negative'
     st.success(f'The predicted household no.'+ str(option)+' is '+predictIsPovertyWord+'.')
