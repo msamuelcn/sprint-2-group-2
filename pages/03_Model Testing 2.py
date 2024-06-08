@@ -31,7 +31,7 @@ X_trainval, X_holdout, y_trainval, y_holdout = train_test_split(X, y, random_sta
 model = RandomForestClassifier(max_depth=8, max_features='log2', n_estimators=200,
                        random_state=1337, n_jobs=-1)
 model.fit(X_trainval, y_trainval)
-
+predicted = model.predict(X)
 
 option = st.selectbox(
     "Select a houshold number.",
@@ -41,7 +41,7 @@ option = st.selectbox(
 st.write("You selected:", option)
 
 if st.button('Predict the household'):
-    predictIsPoverty = predict(X.loc[option],model)
+    predictIsPoverty = predicted.loc[option]
 
     predictIsPovertyWord = 'positive' if predictIsPoverty ==1 else 'negative'
     st.success(f'The predicted household no.'+ option+' is '+predictIsPovertyWord+'.')
