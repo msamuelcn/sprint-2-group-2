@@ -11,6 +11,7 @@ st.image("images/8.png")
 st.subheader("Preprocessing")
 st.image("images/10.png")
 st.image("images/11.png")
+
 # st.header("Exploratory Data Analysis")
 # st.image("images/13.png")
 # st.image("images/14.png")
