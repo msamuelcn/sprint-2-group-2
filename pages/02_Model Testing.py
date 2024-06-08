@@ -43,7 +43,7 @@ sample_data = pd.DataFrame({
 98588,
 107113,
 157581,12188,15442,44205,26660,54774],
-  'Class':['Below poverty line','Below poverty line','Below poverty line','Below poverty line','Below poverty line'
+  'Class':['Below poverty line','Below poverty line','Below poverty line','Below poverty line','Below poverty line',
            'Above poverty line','Above poverty line','Above poverty line','Above poverty line','Above poverty line'
            ]
 })
