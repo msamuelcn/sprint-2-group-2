@@ -3,6 +3,9 @@ import pickle
 import pandas as pd
 
 
+pickle_in = open("random_forests_hypertuned.pkl", "rb")
+model = pickle.load(pickle_in)
+
 st.title('Impoverished Group Predictor')
 
 df = pd.read_csv('data/20240602_fies_cleaned_.csv')
