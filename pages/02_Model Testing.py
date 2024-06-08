@@ -10,7 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 #Caching the model for faster loading
-@st.cache
+# @st.cache
 
 # Define the prediction function
 # def predict(X_data, m):
