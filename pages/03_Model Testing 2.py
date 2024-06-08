@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 # model = pickle.load(pickle_in)
 
 def predict(X_data, m):
-    prediction = m.predict(X_data)
+    prediction = m.predict(pd.DataFrame(X_data))
     return prediction
 
 
