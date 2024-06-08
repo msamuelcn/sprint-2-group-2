@@ -26,7 +26,7 @@ st.image("images/23.png")
 st.image("images/24.png")
 
 st.title("Results and Discussion")
-st.subheader("Utilize the best model in identifying the key factors influencing the <b>Unde﻿r the Poverty line</b> households")
+st.subheader("Utilize the best model in identifying the key factors influencing the Under the Poverty line households")
 st.image("images/31.png")
 
 st.subheader("Evaluate and potentially challenge the poverty threshold (in pesos/person) set by the PSA")

@@ -35,6 +35,20 @@ predicted = model.predict(X)
 #     "Select a houshold number.",
 #     tuple(df['SEQUENCE_NO'])
 #     )
+
+st.caption('Try the following household number below.')
+sample_data = pd.DataFrame({
+  'Household number':[82337,
+96528,
+98588,
+107113,
+157581,12188,15442,44205,26660,54774],
+  'Class':['Below poverty line','Below poverty line','Below poverty line','Below poverty line','Below poverty line'
+           'Above poverty line','Above poverty line','Above poverty line','Above poverty line','Above poverty line'
+           ]
+})
+st.table(sample_data)
+
 option  = st.number_input('Select a houshold number.', min_value=1, max_value=len(X), value=1)
 
 # st.write("You selected:", option)
@@ -42,6 +56,7 @@ option  = st.number_input('Select a houshold number.', min_value=1, max_value=le
 if st.button('Predict the household'):
     predictIsPoverty = predicted[option]
 
-    predictIsPovertyWord = 'positive' if predictIsPoverty ==1 else 'negative'
-    st.success(f'The predicted household no.'+ str(option)+' is '+predictIsPovertyWord+'.')
+    predictIsPovertyWord = 'below' if predictIsPoverty ==1 else 'above'
+    st.success(f'The predicted household no. '+ str(option)+' is '+predictIsPovertyWord+' of the poverty line.')
+
 
