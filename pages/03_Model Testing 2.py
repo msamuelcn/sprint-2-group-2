@@ -33,12 +33,13 @@ model = RandomForestClassifier(max_depth=8, max_features='log2', n_estimators=20
 model.fit(X_trainval, y_trainval)
 predicted = model.predict(X)
 
-option = st.selectbox(
-    "Select a houshold number.",
-    tuple(df['SEQUENCE_NO'])
-    )
+# option = st.selectbox(
+#     "Select a houshold number.",
+#     tuple(df['SEQUENCE_NO'])
+#     )
+option  = st.number_input('Select a houshold number.', min_value=1, max_value=len(X), value=1)
 
-st.write("You selected:", option)
+# st.write("You selected:", option)
 
 if st.button('Predict the household'):
     predictIsPoverty = predicted[option]
