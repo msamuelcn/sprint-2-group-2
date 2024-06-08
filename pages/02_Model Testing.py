@@ -35,6 +35,7 @@ predicted = model.predict(X)
 #     "Select a houshold number.",
 #     tuple(df['SEQUENCE_NO'])
 #     )
+@st.cache
 
 st.caption('Try the following household number below.')
 sample_data = pd.DataFrame({
