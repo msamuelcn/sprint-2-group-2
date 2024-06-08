@@ -56,6 +56,13 @@ st.table(sample_data)
 
 option  = st.number_input('Select a houshold number.', min_value=1, max_value=len(X), value=1)
 
+st.caption('Household details:')
+df_option= pd.DataFrame(X.loc[option]).reset_index()
+df_option.columns=['Feature','value']
+st.table(df_option)
+
+
+
 # st.write("You selected:", option)
 
 if st.button('Predict the household'):
