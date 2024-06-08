@@ -63,7 +63,7 @@ if st.button('Predict the household'):
     st.success(f'The predicted household no. '+ str(option)+' is '+predictIsPovertyWord+' the poverty line.')
 
 
-st.caption('Household details of household #'+str(option)+':')
+st.caption('Details of household #'+str(option)+':')
 df_option= pd.DataFrame(X.loc[option]).reset_index()
 df_option.columns=['Feature','value']
 st.table(df_option)
