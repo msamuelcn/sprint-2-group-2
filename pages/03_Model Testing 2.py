@@ -45,5 +45,5 @@ if st.button('Predict the household'):
     predictIsPoverty = predicted[option]
 
     predictIsPovertyWord = 'positive' if predictIsPoverty ==1 else 'negative'
-    st.success(f'The predicted household no.'+ option+' is '+predictIsPovertyWord+'.')
+    st.success(f'The predicted household no.'+ str(option)+' is '+predictIsPovertyWord+'.')
 
